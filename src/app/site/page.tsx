@@ -31,6 +31,7 @@ export default function Home() {
             </p>
             <div className='flex justify-center gap-4 flex-wrap mt-6'>
               {pricingCards.map((card) => (
+                // WIP: Wire up free product from stripe
               <Card key={card.title} className={clsx('w-[300px] flex flex-col justify-between', {
                 'border-2 border-primary': card.title === 'Unlimited Saas',
               })}>
@@ -47,7 +48,7 @@ export default function Home() {
                     {card.price}
                   </span>
                   <span className='text-muted-foreground'>
-                    /m
+                    /month
                   </span>
                 </CardContent>
                 <CardFooter className='flex flex-col items-start gap-4'>

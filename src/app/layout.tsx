@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { DM_Sans } from 'next/font/google'
 import './globals.css'
-import { ClerkProvider } from '@clerk/nextjs'
 import { ThemeProvider } from '@/providers/theme-provider'
 
 const font = DM_Sans({ subsets: ['latin'] })
@@ -28,9 +27,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-        <ClerkProvider>
         {children}
-        </ClerkProvider>
         </ThemeProvider>
       </body>
     </html>
